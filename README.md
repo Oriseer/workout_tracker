@@ -129,7 +129,7 @@ Contributions are welcome! Please follow these steps:
 5. Open a Pull Request.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/Oriseer/workout_tracker/tree/main?tab=MIT-1-ov-file) file for details.
 
 ## Contact
 For questions or support, reach out to [parianjohnmichael@gmail.com](mailto:parianjohnmichael@gmail.com) or open an issue on GitHub.
