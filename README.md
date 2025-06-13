@@ -15,20 +15,20 @@ Workout Tracker API is a RESTful API designed to help users create, manage, and 
 - **POST /workout-plans/**  
   Create a new workout plan.  
   **Requires Authentication**: Yes  
-  **Request Body**: JSON with workout plan details (e.g., name, exercises, duration).  
-  **Response**: JSON with created workout plan details or error message.
+  **Request Body**: JSON with workout plan details (e.g., ExerciseName, Repetition, Sets, Weights).  
+  **Response**: JSON error message if error is encountered
 
 - **PUT /workout-plans/**  
   Update an existing workout plan.  
   **Requires Authentication**: Yes  
   **Request Body**: JSON with updated workout plan details.  
-  **Response**: JSON with updated workout plan details or error message.
+  **Response**: JSON error message if error is encountered
 
 - **DELETE /workout-plans/**  
   Delete a workout plan.  
   **Requires Authentication**: Yes  
-  **Request Body**: JSON with workout plan ID.  
-  **Response**: Success message or error message.
+  **Request Body**: JSON with workout plan name.  
+  **Response**: JSON error message if error is encountered
 
 - **GET /workouts**  
   List all workout plans for the authenticated user.  
@@ -54,39 +54,13 @@ Authorization: Bearer <your-jwt-token>
 
 ## Getting Started
 
-### Prerequisites
-- Node.js (or your preferred runtime environment)
-- A database (e.g., MongoDB, PostgreSQL)
-- JWT library for your programming language
-- HTTP client (e.g., Postman, curl) for testing
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/workout-tracker-api.git
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up environment variables (e.g., `.env` file):
-   ```bash
-   DATABASE_URL=your-database-url
-   JWT_SECRET=your-jwt-secret
-   PORT=3000
-   ```
-4. Start the server:
-   ```bash
-   npm start
-   ```
-
 ### Example Usage
 #### Create a Workout Plan
 ```bash
-curl -X POST http://localhost:3000/workout-plans/ \
+curl -X POST http://localhost:8080/workout-plans/ \
 -H "Authorization: Bearer <your-jwt-token>" \
 -H "Content-Type: application/json" \
--d '{"name": "Morning Routine", "exercises": ["Push-ups", "Squats"], "duration": 30}'
+-d '{"ExerciseName": "curlup", "Repititions": 9, "Sets": 3, "Weight": 11}'
 ```
 
 #### List All Workout Plans
@@ -116,5 +90,5 @@ Contributions are welcome! Please follow these steps:
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
-For questions or support, reach out to [your-email@example.com](mailto:your-email@example.com) or open an issue on GitHub.
+For questions or support, reach out to [parianjohnmichael@gmail.com](mailto:parianjohnmichael@gmail.com) or open an issue on GitHub.
 
