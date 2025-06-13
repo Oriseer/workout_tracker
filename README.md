@@ -1,4 +1,3 @@
-
 # Workout Tracker API
 
 ## Overview
@@ -54,6 +53,49 @@ Authorization: Bearer <your-jwt-token>
 
 ## Getting Started
 
+### Prerequisites
+- **Go**: Ensure Go is installed (version 1.16 or later recommended).
+- **Database**: The API requires a configured database (e.g., PostgreSQL, MySQL). Ensure the database server is running and accessible.
+- **Environment Variables**: Set up a `.env` file with the necessary environment variables (see Configuration section below).
+
+### Configuration
+1. **Database Setup**:
+   - Create a database for the API (e.g., `workout_tracker_db`).
+   - Configure the database connection by setting the following environment variables in a `.env` file in the project root:
+     ```
+     DB_USER=<your-database-username>
+     DB_NAME=<your-database-name>
+     DB_PASSWORD=<your-database-password>
+     ```
+   - Ensure the database user has appropriate permissions to create and modify tables.
+
+2. **JWT Configuration**:
+   - Set a secret key for JWT signing by adding the following environment variable to the `.env` file:
+     ```
+     JWT_KEY=<your-secret-key>
+     ```
+   - Use a strong, random string for the `JWT_KEY` to ensure security.
+
+3. **Example `.env` File**:
+   ```env
+   DB_USER=workout_user
+   DB_NAME=workout_tracker_db
+   DB_PASSWORD=securepassword123
+   JWT_KEY=your-very-secure-jwt-secret-key
+   ```
+
+4. **Install Dependencies**:
+   Run the following command to install required Go packages:
+   ```bash
+   go mod tidy
+   ```
+
+5. **Run the API**:
+   Start the server using:
+   ```bash
+   go run main.go
+   ```
+
 ### Example Usage
 #### Create a Workout Plan
 ```bash
@@ -91,4 +133,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 For questions or support, reach out to [parianjohnmichael@gmail.com](mailto:parianjohnmichael@gmail.com) or open an issue on GitHub.
-
